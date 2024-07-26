@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shitty Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Shitty Calculator!!!</h1>
+</header>
+<section>
+    {% block content %}Content{% endblock content %}
+</section>
+<footer>
+    © 2024 zeovl
+</footer>
+</body>
+</html>
