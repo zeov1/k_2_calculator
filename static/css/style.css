@@ -3,31 +3,67 @@ body {
     font-family: "Segoe UI", system-ui, sans-serif;
     margin: 0;
 }
+
 p {
     margin: 0;
 }
+
 li {
     margin-top: 8px;
 }
+
 header {
     color: white;
     background: lightcoral;
 }
+
 section {
     background: #ffeeee;
     min-height: auto;
 }
+
 footer {
     color: white;
     background: lightcoral;
 }
+
 .window {
     margin: 5% 30%;
 }
+
 .container {
     margin: 0 15%;
     padding: 20px 0;
 }
+
 .error {
     color: red;
+}
+
+/* ~~~~~~~~~~ NAVIGATION ~~~~~~~~~~ */
+
+.nav ul {
+    background: #ef6565;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    display: block;
+    padding: 7px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav ul li a.active, .nav ul li a:hover {
+    border-bottom: 3px solid red;
 }

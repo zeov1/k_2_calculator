@@ -9,20 +9,27 @@
 <body>
 <div class="window">
     <header>
-    <div class="container">
-        <h1>Shitty Calculator!!!</h1>
-    </div>
-</header>
-<section>
-    <div class="container">
-        {% block content %}Content{% endblock content %}
-    </div>
-</section>
-<footer>
-    <div class="container">
-        © 2024 zeovl
-    </div>
-</footer>
+        <div class="container">
+            <h1>Shitty Calculator!!!</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav">
+                <li class="nav"><a href="{% url 'calc' %}">Index</a></li>
+                <li class="nav"><a href="{% url 'calc' %}?a=12&b=5&op=div">Example 1</a></li>
+                <li class="nav"><a href="{% url 'calc' %}?a=5&b=11&op=minus">Example 2</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            {% block content %}Content{% endblock content %}
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            © 2024 zeovl
+        </div>
+    </footer>
 </div>
 </body>
 </html>

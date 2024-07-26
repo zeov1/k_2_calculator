@@ -4,8 +4,10 @@
 
 
     {% if a_ok and b_ok and op_ok %}
+        <br>
         <h2>Result:</h2>
         <p>{{ a }} {{ op }} {{ b }} = {{ res }}</p>
+        <br>
     {% else %}
         <h2 class="error">Error!</h2>
         {% if not a_ok %}
@@ -18,6 +20,6 @@
             <p>Parameter <strong>op</strong> must be "plus", "minus", "mult" or "div"!</p>
         {% endif %}
     {% endif %}
-    
+
 
 {% endblock content %}

@@ -20,5 +20,5 @@ from calc.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calc/', index),
+    path('calc/', index, name='calc'),
 ]
