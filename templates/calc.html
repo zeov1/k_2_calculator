@@ -4,10 +4,10 @@
 
 
     {% if a_ok and b_ok and op_ok %}
-        <h1>Result:</h1>
+        <h2>Result:</h2>
         <p>{{ a }} {{ op }} {{ b }} = {{ res }}</p>
     {% else %}
-        <h1>Error!</h1>
+        <h2 class="error">Error!</h2>
         {% if not a_ok %}
             <p>Parameter <strong>a</strong> must be an integer!</p>
         {% endif %}
@@ -15,7 +15,7 @@
             <p>Parameter <strong>b</strong> must be an integer!</p>
         {% endif %}
         {% if not op_ok %}
-            <p>Parameter <strong>op</strong> must be "plus", "minus", "mult" or "divide"!</p>
+            <p>Parameter <strong>op</strong> must be "plus", "minus", "mult" or "div"!</p>
         {% endif %}
     {% endif %}
     

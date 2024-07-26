@@ -2,6 +2,9 @@ from django.shortcuts import render
 
 
 def index(request):
+    if not request.GET:
+        return render(request, 'calc-index.html')
+
     try:
         a = request.GET['a']
         a = int(a)
@@ -34,7 +37,7 @@ def index(request):
     elif op == 'mult':
         op = '*'
         res = a * b
-    elif op == 'divide':
+    elif op == 'div':
         op = '/'
         res = a / b
     else:

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <p>Hello! It's a query-based calculator. In order to calculate 2 numbers, follow these steps:</p>
+
+    <ol>
+        <li>Type <strong>?</strong> after "calc/"</li>
+        <li>Specify the value of the parameter <strong>a</strong> like this: .../?a=10</li>
+        <li>Type <strong>&</strong>. You have to do it between each pair of parameters</li>
+        <li>Specify the value of the parameter <strong>b</strong> (similarly)</li>
+        <li>
+            <p>Specify the operation (<strong>op</strong>) between <strong>a</strong> and <strong>b</strong>. The
+                application supports:</p>
+            <ul>
+                <li>plus</li>
+                <li>minus</li>
+                <li>mult</li>
+                <li>div</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p>In result, you create a GET-request like this:</p>
+    <a href="?a=12&b=5&op=div">https://localhost/calc/?a=12&b=5&op=div</a>
+
+
+{% endblock content %}
