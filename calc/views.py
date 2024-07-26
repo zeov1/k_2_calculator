@@ -7,7 +7,7 @@ def index(request):
 
     try:
         a = request.GET['a']
-        a = int(a)
+        a = float(a)
         a_ok = True
     except ValueError:
         a = None
@@ -15,7 +15,7 @@ def index(request):
 
     try:
         b = request.GET['b']
-        b = int(b)
+        b = float(b)
         b_ok = True
     except ValueError:
         b = None
@@ -39,7 +39,10 @@ def index(request):
         res = a * b
     elif op == 'div':
         op = '/'
-        res = a / b
+        if b == 0.0:
+            res = float('inf') * a
+        else:
+            res = a / b
     else:
         res = None
         op_ok = False
