@@ -11,15 +11,15 @@ def calc(request):
         ok = True
         msg = []
         if data.is_valid():
-            a = data.cleaned_data['a']
+            a_str = data.cleaned_data['a']
             try:
-                a = float(a)
+                a = float(a_str)
             except ValueError:
                 ok = False
                 msg.append('Value a must be float')
-            b = data.cleaned_data['b']
+            b_str = data.cleaned_data['b']
             try:
-                b = float(b)
+                b = float(b_str)
             except ValueError:
                 ok = False
                 msg.append('Value b must be float')
