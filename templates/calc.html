@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Calcutator{% endblock title %}
+
+{% block content %}
+
+    <div class="calc-wrapper">
+        <form class="calc-form" action="{% url 'calc' %}" method="POST">
+            {% csrf_token %}
+            <input class="calc-input" type="number" name="a" placeholder="1st number" required>
+            <input class="calc-input" type="number" name="b" placeholder="2nd number" required>
+            <button class="calc-input calc-button" type="submit" name="op" value="+">+</button>
+            <button class="calc-input calc-button" type="submit" name="op" value="-">-</button>
+            <button class="calc-input calc-button" type="submit" name="op" value="*">*</button>
+            <button class="calc-input calc-button" type="submit" name="op" value="/">/</button>
+        </form>
+
+        <div class="result-wrapper">
+
+            <h2>Result:</h2>
+            <textarea class="result-text" cols="30" rows="1" readonly></textarea>
+        </div>
+    </div>
+
+
+{% endblock content %}

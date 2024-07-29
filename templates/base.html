@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Form Calculator (POST){% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="window">
+    <header>
+        <div class="container">
+            <h1>Form Calculator (POST)</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav">
+                <li class="nav"><a href="{% url 'calc' %}">Calculator</a></li>
+                <li class="nav"><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class=" container">
+            {% block content %}Content{% endblock content %}
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            © 2024 zeovl
+        </div>
+    </footer>
+</div>
+</body>
+</html>
