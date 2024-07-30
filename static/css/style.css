@@ -79,6 +79,7 @@ footer {
 }
 
 .result-wrapper {
+    margin-left: 5px;
     min-width: 60%;
     text-align: center;
 }
@@ -91,6 +92,7 @@ footer {
     resize: none;
     font-size: 20px;
     min-height: 60px;
+    max-width: 100%;
     border: none;
     text-align: center;
 }
@@ -129,6 +131,10 @@ footer {
 
 /* 992-1200 */
 @media screen and (max-width: 1200px) {
+    .nav ul {
+        justify-content: start;
+    }
+
     h1 {
         font-size: 45px;
     }
@@ -137,10 +143,18 @@ footer {
         font-size: 40px;
     }
 
+    .result-text {
+        font-size: 40px;
+    }
+
     .calc-input {
         margin: 10px 0;
         min-height: 100px;
         font-size: 40px;
+    }
+
+    .container {
+        margin: 0 2%;
     }
 
     .window {
@@ -152,13 +166,24 @@ footer {
 /* 768-992 */
 @media screen and (max-width: 992px) {
     body {
-        font-size: 19px;
+        font-size: 27px;
+    }
+
+    .calc-input {
+        font-size: 27px;
+    }
+
+    .result-text {
+        font-size: 27px;
     }
 
     .window {
-        width: 720px;
+        width: 90%;
     }
+}
 
+/* 576-768 */
+@media screen and (max-width: 768px) {
     .calc-wrapper {
         flex-direction: column;
     }
@@ -175,25 +200,10 @@ footer {
         min-height: 40px;
         font-size: 19px;
     }
-
-    .result-text {
-        min-height: 40px;
-    }
-}
-
-/* 576-768 */
-@media screen and (max-width: 768px) {
-    .window {
-        width: 540px;
-    }
 }
 
 /* 320-576 */
 @media screen and (max-width: 576px) {
-    .window {
-        width: 90%;
-    }
-
     .calc-input {
         font-size: 13px;
     }
